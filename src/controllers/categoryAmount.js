@@ -81,25 +81,27 @@ export const categoryAmountUpdateById = async (req, res = response) => {
     const { id } = req.params;
 
     const {
-      categoria,
-      anio,
-      modalidadHorariaID,
-      diasServicioID,
-      guardiaTipoID,
-      monto,
+      Categoria,
+      Anio,
+      ModalidadHorariaID,
+      DiasServicioID,
+      GuardiaTipoID,
+      Monto,
+      Usuario
     } = req.body;
 
     const pool = await getConnection();
 
     await pool
       .request()
-      .input("categoriaMontosID", id)
-      .input("categoria", categoria)
-      .input("anio", anio)
-      .input("modalidadHorariaID", modalidadHorariaID)
-      .input("diasServicioID", diasServicioID)
-      .input("guardiaTipoID", guardiaTipoID)
-      .input("monto", monto)
+      .input("CategoriaMontosID", id)
+      .input("Categoria", Categoria)
+      .input("Anio", Anio)
+      .input("ModalidadHorariaID", ModalidadHorariaID)
+      .input("DiasServicioID", DiasServicioID)
+      .input("GuardiaTipoID", GuardiaTipoID)
+      .input("Monto", Monto)
+      .input("Usuario", Usuario)
       .execute(queries.CategoryAmountUpdateById);
 
     res.status(201).json({

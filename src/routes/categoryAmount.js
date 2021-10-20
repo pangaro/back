@@ -41,7 +41,18 @@ router.post(
   categoryAmountAddNew
 );
 
-router.put("/categoryAmount/:id", categoryAmountUpdateById);
+router.put("/categoryAmount/:id", 
+  [
+    check('Categoria', 'La categoria es obligatoria').not().isEmpty(),
+    check('Anio', 'El año es obligatorio').not().isEmpty(),
+    check('ModalidadHorariaID', 'La modalidad horaria es obligatoria').not().isEmpty(),
+    check('DiasServicioID', 'El dia servicio es obligatorio').not().isEmpty(),
+    check('GuardiaTipoID', 'La guardia tipo es obligatoria').not().isEmpty(),
+    check('Monto', 'El monto es obligatorio').not().isEmpty(),
+    check('Usuario', 'El usuario es obligatorio').not().isEmpty(),
+    validatorField
+  ],
+  categoryAmountUpdateById);
 
 router.delete("/categoryAmount/:id", categoryAmountDeleteById);
 
