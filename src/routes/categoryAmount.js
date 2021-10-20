@@ -29,13 +29,13 @@ router.post(
 router.post(
   "/categoryAmount/new",
   [
-    check('categoria', 'La categoria es obligatoria').not().isEmpty(),
-    check('anio', 'El año es obligatorio').not().isEmpty(),
-    check('modalidadHorariaID', 'La modalidad horaria es obligatoria').not().isEmpty(),
-    check('diasServicioID', 'El dia servicio es obligatorio').not().isEmpty(),
-    check('guardiaTipoID', 'La guardia tipo es obligatoria').not().isEmpty(),
-    check('monto', 'El monto es obligatorio').not().isEmpty(),
-    check('usuario', 'El usuario es obligatorio').not().isEmpty(),
+    check('Categoria', 'La categoria es obligatoria').not().isEmpty(),
+    check('Anio', 'El año es obligatorio').not().isEmpty(),
+    check('ModalidadHorariaID', 'La modalidad horaria es obligatoria').not().isEmpty(),
+    check('DiasServicioID', 'El dia servicio es obligatorio').not().isEmpty(),
+    check('GuardiaTipoID', 'La guardia tipo es obligatoria').not().isEmpty(),
+    check('Monto', 'El monto es obligatorio').not().isEmpty(),
+    check('Usuario', 'El usuario es obligatorio').not().isEmpty(),
     validatorField
   ],
   categoryAmountAddNew

@@ -60,5 +60,5 @@ export const queries = {
     modalityHourGetAll: 'SP_GUA_ModalidadHoraria_Cons',
     guardTypeGetAll: 'SP_GUA_GuardiaTipo_Cons',
     dayServiceGetAll: 'SP_GUA_Cbo_DiasServicio_Cons',
-    categorySelectGetAll: 'SP_GUA_Categoria_Cons',
+    categorySelectGetAll: 'SP_GUA_GuadiaCategoria_Cons',
 };

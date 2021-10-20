@@ -41,26 +41,26 @@ export const categoryAmountGetAll = async (req, res = response) => {
 export const categoryAmountAddNew = async (req, res = response) => {
   try {
     const {
-      categoria,
-      anio,
-      modalidadHorariaID,
-      diasServicioID,
-      guardiaTipoID,
-      monto,
-      usuario,
+      Categoria,
+      Anio,
+      ModalidadHorariaID,
+      DiasServicioID,
+      GuardiaTipoID,
+      Monto,
+      Usuario,
     } = req.body;
 
     const pool = await getConnection();
 
     await pool
       .request()
-      .input("categoria", categoria)
-      .input("anio", anio)
-      .input("modalidadHorariaID", modalidadHorariaID)
-      .input("diasServicioID", diasServicioID)
-      .input("guardiaTipoID", guardiaTipoID)
-      .input("monto", monto)
-      .input("usuario", usuario)
+      .input("Categoria", Categoria)
+      .input("Anio", Anio)
+      .input("ModalidadHorariaID", ModalidadHorariaID)
+      .input("DiasServicioID", DiasServicioID)
+      .input("GuardiaTipoID", GuardiaTipoID)
+      .input("Monto", Monto)
+      .input("Usuario", Usuario)
       .execute(queries.categoryAmountAddNew);
 
     res.status(201).json({
